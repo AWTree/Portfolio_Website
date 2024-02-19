@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arno Wu's Portofolio</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+   
+</head>
+<body>
+<!-- ----------------------- Header ----------------------- -->
+   <header>
+        <div class="navContainer">
+            <nav>
+                <img id="logo" src="../images/logo.png" style="height: 36px; width: 36px">
+                <ul id="sidemenu">
+                    <li><a class="navitem" href="../index.html">Home</a></li>
+                    <li><a class="navitem active" href="gallery.html">Gallery</a></li>
+                    <li><a class="navitem" href="about.html">About</a></li>
+                    <li><a class="navitem" href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" style="color: #000000;" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" style="color: #000000;" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+<!-- ----------------------- Project Content ----------------------- -->
+   <div id="galleryContainer">
+
+        <div class="main-col">
+            <h1>Space War</h1>
+            <h2 class="subtitle">2021</h2>
+            <div class="tags">
+                <p class="tag">Board Game</p>
+                <p class="tag">Casual</p>
+            </div>
+            
+            <div class="screen">
+                <div class="slider">
+                    <div class="slides fade">
+                        <img class="slide" src="/images/Space_War/gameboard.jpg">
+                    </div>
+                
+                    <div class="slides fade">
+                        <img class="slide" src="/images/Space_War/pieces.jpg">
+                    </div>
+
+                    <div class="slides fade">
+                        <img class="slide" src="/images/Space_War/start.jpg">
+                    </div>
+
+                    <div class="slides fade">
+                        <img class="slide" src="/images/Space_War/play.jpg">
+                    </div>
+                      
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+
+        <div class="main-col2">
+            <h1 class="subtitle">About</h1>
+            <p class="text">
+                <strong class="bold">Introduction</strong>
+                <br>
+                You are rival space explorers eager to explore the unknown. At the heart of the galaxy lies the interstellar portal, every explorer's dream; it will allow you to explore uncharted space never seen before. To obtain Energy Tanks to fuel the interstellar portal, players must buy them from Markets scattered around the galaxy. Energy Crystals are the main currency of this region and can be found on select planets. Missiles can be purchased from the market and are used to attack your opponent's ships. Each player's ship has the shields to take 1 missile hit; any more than that, and their ship is damaged beyond repair.
+                Players: 2-4
+                Setup: Game board, 6-sided die, and included game pieces
+                Objective: Race to collect Energy Crystals and obtain 5 Energy Tanks to charge the Interstellar Portal!
+                <br>
+                <br>
+                <strong class="bold">Introduction</strong>
+                <br>
+                1. Each player is granted 1 Energy Crystal to start off the game.
+                <br>
+                2. Players place their ships into the SPACESTATION zone.
+                <br>
+                3. Players take turns rolling a die that will indicate how many planets they can move that turn.
+                <br>
+                4. While in the starting region, players must choose a direction (clockwise or counterclockwise) they want to go in for that cycle.
+                <br>
+                5. The player can move in any direction within a certain region, but the player's ship cannot go back to a previous region after their ship has crossed its boundary.
+                <br>
+                6. If a player finishes their move on an Energy Crystal planet, the player is granted an Energy Crystal. (A maximum of 5 Energy Crystals can be held at a given time)
+                <br>
+                7. If a player finishes their move on a Market planet, the player can only purchase one item from the market: an Energy Tank for 2 Energy Crystals or a Missile for 3
+                Energy Crystals (only 1 missile can be held at a time).
+                <br>
+                8. At any time during a player's turn (except for the turn that the missile was bought), if within 1-2 tiles from another player's ship, the Missile can be used to attack that player. The attacking player can take an Energy Tank from the opposing player (if applicable) and the opponent's ship is sent back to the SPACESTATION zone. If the opposing player has already been attacked previously, their ship is destroyed and that player is eliminated from the game.
+                <br>
+                9. Every time a player completes a trip around the galaxy, the player will be granted Energy Crystals up to the maximum capacity (5).
+                <br>
+                10. After completing that trip, the player is free to change the direction of their next cycle. (Clockwise or Counterclockwise)
+                <br>
+                11. Once a player has obtained 5 energy tanks, their ship must return to the SPACESTATION in order to enter the Interstellar Portal and win the game!
+            </p>
+        </div>
+
+        <div class="main-col3">
+            
+        </div>
+
+   </div>
+    
+   <footer>
+        <p id="copyright">Copyright © arnowuportfolio.com</p>   
+   </footer>
+   
+   <script src="https://kit.fontawesome.com/f69f82de65.js" crossorigin="anonymous"></script>
+   <script src="../script.js"></script>
+   
+</body>
+</html>

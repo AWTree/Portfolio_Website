@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arno Wu's Portofolio</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="navContainer">
+            <nav>
+                <img id="logo" src="../images/logo.png" style="height: 36px; width: 36px">
+                <ul id="sidemenu">
+                    <li><a class="navitem" href="../index.html">Home</a></li>
+                    <li><a class="navitem" href="gallery.html">Gallery</a></li>
+                    <li><a class="navitem active" href="about.html">About</a></li>
+                    <li><a class="navitem" href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" style="color: #000000;" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" style="color: #000000;" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="pageContainer" id="about">
+        <div class="aboutCard">
+            <div class="banner">
+                <img id="banner" src="../images/banner.jpg">
+            </div>
+            <div class="profileContainer">
+                <img id="selfPortrait" src="../images/self_portrait2.jpg">
+                <p class="nameTag">Arno Wu</p>
+                <p class="nameTag">He/Him</p>
+            </div>
+
+            <div class="textContainer">
+                <h1 class="header">About Me</h1>
+                <p class="text">
+                    Hi, this is Yang Wu and you can call me Arno. 
+                    I am a passionate game developer and web designer. 
+                    I'm dedicated to create interesting games and immersive storeis.
+                </p>
+            </div>
+        </div>
+
+        <div class="about_col">
+            <div class="tab-titles">
+                <p class="tab-links active-link font-weight-medium font-weight-medium" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links font-weight-medium" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links font-weight-medium" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <span>Programming Language</span>
+                    <p>Python</p>
+                    <p>JavaScript</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>PHP</p>
+                    <br>
+                    
+                    <span>UI/UX Design</span>
+                    <p>Adobe Illustrator</p>
+                    <p>Adobe Photoshop</p>
+                    <br>    
+                    
+                    <span>Game Dev</span>
+                    <p>Twine</p>
+                    <p>Godot</p>
+                    <p>Construct 3</p>
+                    <p>Phaser</p>
+                    <p>GB Studio</p>
+                    <p>Blender</p>
+                    <br>
+
+                    <span>Art & Narrative</span>
+                    <p>Procreate</p>
+                    <p>Aseprite</p>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <span>Bitllut Hill (Group Project), Game Design Studio</span>
+                    <p>November 2023 – December 2023</p>
+                    <br>
+
+                    <span>Brain Rhapsody (Group Project), Game Design Studio</span>
+                    <p>October 2023 – November 2023</p>
+                    <br>
+
+                    <span>Till it’s Nothing (Individual Project), Game Design Studio</span>
+                    <p>September 2023 – October 2023</p>
+                    <br>
+
+                    <span>Space War (Individual Project), Foundations of Video Games</span>
+                    <p>October 2021 – November 2021</p>
+                    <br>
+
+                    <span>Invasion (Individual Project), Foundations of Video Games</span>
+                    <p> November 2023 – December 2023</p>
+                    <br>
+
+                    <span>Lost in Forest (Individual Project), Foundations of Video Games</span>
+                    <p>September 2021 – October 2021</p>
+                    <br>
+
+                    <span>Atticale (Individual Project)</span>
+                    <p>November 2022 – Present</p>
+                    <br>
+
+                    <span>Portfolio Website (Individual Project)</span>
+                    <p>January 2023 – February 2023</p>
+                    <br>
+
+                    <span>Night City (Individual Project)</span>
+                    <p>September 2021 – October 2023</p>
+                    <br>
+
+                    <span>Edward Heald (Individual Project)</span>
+                    <p>October 2019 – January 2020</p>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <span>Major</span>
+                    <p>Bachelor’s Degree in Game Design and Playable Media</p>
+                    <br>
+
+                    <span>University</span>
+                    <p>University of California Santa Cruz</p>
+                    <br>
+
+                    <span>Graduation Date</span>
+                    <p>June, 2025 (Expected)</p>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+   
+   <footer>
+    <p id="copyright">Copyright © arnowuportfolio.com</p>   
+   </footer>
+   
+   <script src="https://kit.fontawesome.com/f69f82de65.js" crossorigin="anonymous"></script>
+   <script src="../script.js"></script>
+
+   <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+   </script>
+</body>
+</html>
