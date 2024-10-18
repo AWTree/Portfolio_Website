@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arno Wu's Portofolio</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+   
+</head>
+<body>
+<!-- ----------------------- Header ----------------------- -->
+   <header>
+        <div class="navContainer">
+            <nav>
+                <img id="logo" src="../images/logo.png" style="height: 36px; width: 36px">
+                <ul id="sidemenu">
+                    <li><a class="navitem" href="../index.html">Home</a></li>
+                    <li><a class="navitem active" href="gallery.html">Gallery</a></li>
+                    <li><a class="navitem" href="about.html">About</a></li>
+                    <li><a class="navitem" href="contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" style="color: #000000;" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" style="color: #000000;" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+<!-- ----------------------- Project Content ----------------------- -->
+   <div id="galleryContainer">
+
+        <div class="main-col">
+            <h1>Till its Nothing</h1>
+            <h2 class="subtitle">2023</h2>
+            <div class="tags">
+                <p class="tag">Top-Down</p>
+                <p class="tag">Shooter</p>
+                <p class="tag">Violent</p>
+                <p class="tag">Pixel Graphics</p>
+            </div>
+            
+            <div class="screen">
+                <video controls>
+                    <source src="../images/Till_its_Nothing/till_its_nothing_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="main-col2">
+            <h1 class="subtitle">About</h1>
+            <p class="text">
+                This is a practice project made by Godot inspired by the Hotline Miami Series. 
+                In this gripping tale of trauma and redemption, players immerse themselves in the journey of a complex protagonist. 
+                The game unfolds through a top-down perspective, where each action and decision unveils a deeper layer of the narrative.
+            </p>
+        </div>
+
+        <div class="main-col3">
+            <a href="https://arnowu.itch.io/till-its-nothing" target="_blank" download class="download_btn">Download</a>
+        </div>
+
+   </div>
+    
+   <footer>
+        <p id="copyright">Copyright © arnowuportfolio.com</p>   
+   </footer>
+   
+   <script src="https://kit.fontawesome.com/f69f82de65.js" crossorigin="anonymous"></script>
+   <script src="../script.js"></script>
+   
+</body>
+</html>
