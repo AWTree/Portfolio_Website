@@ -212,14 +212,15 @@ nav ul li a:hover {
 /* ----------------------- Gallery -----------------------*/
 #gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 50px 30px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 40px 20px;
 }
 
 #gallery .cards {
     position: relative;
-    height: 400px;
+    height: 450px;
     width: 300px;
+    aspect-ratio: 3/2;
     border-radius: 20px;
     box-shadow:0 0 40px -10px rgba(0,0,0,.3), 
       0 0 25px -15px rgba(0,0,0,.2);
@@ -228,7 +229,7 @@ nav ul li a:hover {
 }
 
 .cards img {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
     height: 100%;
     border-radius: 15px;
@@ -261,11 +262,14 @@ nav ul li a:hover {
 
 .layer h3 {
     font-weight: 700;
+    font-size: 23px;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .layer p {
     font-weight: 500;
+    font-size: 18px;
     color: var(--hover);
 }
 
@@ -657,12 +661,9 @@ nav .fa-bars {
 
 /* ----------------------- 1600px -----------------------*/
 @media only screen and (max-width: 1600px) {
-    .pageContainer {
-        width: 80%;
-    }
-
     #gallery {
         width: 50%;
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 40px 20px;
     }
 
@@ -678,24 +679,18 @@ nav .fa-bars {
 
 /* ----------------------- 1080px -----------------------*/
 @media only screen and (max-width: 1080px) {
-    .pageContainer {
-        width: 80%;
-    }
-
     #gallery {
+        width: 80%;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px 10px;
     }
 }
 
 /* ----------------------- 800px -----------------------*/
-@media only screen and (max-width: 800px) {
-    .pageContainer {
-        width: 80%;
-    }
-    
+@media only screen and (max-width: 800px) {    
     #gallery {
-        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px 10px;
     }
 
@@ -705,15 +700,24 @@ nav .fa-bars {
 }
 
 /* ----------------------- 600px -----------------------*/
-@media only screen and (max-width: 600px) {
-    .pageContainer {
-        width: 80%;
-    }
-
+@media only screen and (max-width: 530px) {
     /* Gallery Page */
     #gallery {
-        display: flex;
-        grid-gap: 30px 10px;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px 10px;
+    }
+
+    #gallery .cards {
+        position: relative;
+        height: 300px;
+        width: 200px;
+        aspect-ratio: 3/2;
+        border-radius: 20px;
+        box-shadow:0 0 40px -10px rgba(0,0,0,.3), 
+          0 0 25px -15px rgba(0,0,0,.2);
+        border: 1px solid var(--outline);
+        overflow: hidden;
     }
 
     #galleryContainer {
@@ -840,27 +844,37 @@ nav .fa-bars {
     
 }
 
-/* ----------------------- 320px -----------------------*/
-@media only screen and (max-width: 320px) {
-    .pageContainer {
-        width: 80%;
-    }
-
+/* ----------------------- 500px -----------------------*/
+@media only screen and (max-width: 520px) {
     /* Gallery Page */
     #gallery {
-        display: flex;
-        width: 100%;
-        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        grid-gap: 10px 20px;
     }
 
+    #gallery .cards {
+        position: relative;
+        height: 300px;
+        width: 200px;
+        aspect-ratio: 3/2;
+        border-radius: 20px;
+        box-shadow:0 0 40px -10px rgba(0,0,0,.3), 
+          0 0 25px -15px rgba(0,0,0,.2);
+        border: 1px solid var(--outline);
+        overflow: hidden;
+    }
+    
     #galleryContainer {
-        width: 90%;
+        width: 100%;
     }
 
     /* About Page */
     #about {
-        width: 90%;
+        width: 100%;
     }
+
     .aboutCard {
         width: 256px;
         height: 384px;
@@ -922,10 +936,16 @@ nav .fa-bars {
     }
 
     /* Contact Form */
+    #contact {
+        width: 100%;
+    }
+
     .contactForm {
-        width: 256px;
-        aspect-ratio: 2 / 3;
-        padding: 10px;
+       display: flex;
+       flex-direction: column;
+        width: 300px;
+        aspect-ratio: 3/2;
+        padding: 20px;
         border-radius: 20px;
     }
 
